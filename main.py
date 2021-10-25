@@ -43,15 +43,23 @@ tmin=None
 tmax=None
 proj=None
 
-plt.figure(3)
-fig3 = epochs.plot_psd_topomap(bands=bands, tmin=tmin, tmax=tmax, proj=proj, 
+fig_grad = epochs.plot_psd_topomap(bands=bands, tmin=tmin, tmax=tmax, proj=proj, 
             bandwidth=None, adaptive=False, low_bias=True, normalization='length', 
-            ch_type=None, cmap=None, agg_fun=None, dB=True, n_jobs=1, 
+            ch_type='grad', cmap=None, agg_fun=None, dB=True, n_jobs=1, 
+            normalize=False, 
+            cbar_fmt='auto', outlines='head', axes=None, 
+            show=True, sphere=None, vlim=(None, None), verbose=None)
+plt.savefig(os.path.join('out_figs','bands_topomap_grad.png'))
+
+
+fig_mag = epochs.plot_psd_topomap(bands=bands, tmin=tmin, tmax=tmax, proj=proj, 
+            bandwidth=None, adaptive=False, low_bias=True, normalization='length', 
+            ch_type='mag', cmap=None, agg_fun=None, dB=True, n_jobs=1, 
             normalize=False, 
             cbar_fmt='auto', outlines='head', axes=None, 
             show=True, sphere=None, vlim=(None, None), verbose=None)
 
-plt.savefig(os.path.join('out_figs','bands_topomap.png'))
+plt.savefig(os.path.join('out_figs','bands_topomap_mag.png'))
 
 # --------------------------------------------------------------------------
 
