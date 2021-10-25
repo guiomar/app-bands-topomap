@@ -34,7 +34,7 @@ epochs = mne.read_epochs(os.path.join(fdir,fname))
 
 # == GET CONFIG VALUES ==
 
-bands = config['bands']
+#bands = config['bands']
 
 bands = [(0, 4, 'Delta'), (4, 8, 'Theta'), (8, 12, 'Alpha'),
          (12, 30, 'Beta'), (30, 45, 'Gamma')]
