@@ -24,9 +24,15 @@ cat << EOF > product.json
        { 
            "type": "image/png", 
 	       "name": "Power Spectral Density",
-           "base64": "$(base64 -w 0 out_figs/bands_topomap.png)"
+           "base64": "$(base64 -w 0 out_figs/bands_topomap_grad.png)"
+       },
+       { 
+           "type": "image/png", 
+	       "name": "Power Spectral Density",
+           "base64": "$(base64 -w 0 out_figs/bands_topomap_mag.png)"
        }
-]
+
+    ]
 }
 EOF
 
