@@ -1,5 +1,37 @@
 # PSD Bands topo-map
 
+<!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
+
+> **Plots scalp topographies of power spectral density in canonical frequency bands (delta to gamma) from MEG epochs with MNE-Python plot_psd_topomap, for gradiometers and magnetometers.**
+
+Visualisation utility: computes PSD band topomaps from an MNE epochs file with fixed bands (delta 0-4, theta 4-8, alpha 8-12 Hz and higher bands) and saves one PNG for gradiometers and one for magnetometers. Use it for a quick look at the spatial distribution of band power in MEG epochs.
+
+| | |
+|---|---|
+| 📥 **Inputs** | `neuro/meeg/mne/epochs` |
+| 📤 **Outputs** | `generic/image/png` |
+| 🐳 **Container** | `brainlife/mne:0.24dev` |
+| ⚙️ **Resources** | 8 CPUs |
+| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.586](https://doi.org/10.25663/brainlife.app.586) |
+
+#### 📥 Inputs
+
+| Input | Datatype | Required | Description |
+|---|---|---|---|
+| `epochs01` | `neuro/meeg/mne/epochs` (epochs) | yes | MNE epochs file (-epo.fif) of MEG data. |
+
+#### 📤 Outputs
+
+| Output | Datatype | Description |
+|---|---|---|
+| `out_figs` | `generic/image/png` | PNG topomaps of band power for gradiometers and magnetometers. |
+
+📚 **References used by this App:**
+- Hayashi S, Caron BA, et al., Pestilli F. brainlife.io: A decentralized and open source cloud platform to support neuroscience research. arXiv (2023).
+- Gramfort A, et al. MEG and EEG data analysis with MNE-Python. Front Neurosci 7:267 (2013). [doi:10.3389/fnins.2013.00267](https://doi.org/10.3389/fnins.2013.00267)
+
+<!-- brainlife-app:end -->
+
 [![Abcdspec-compliant](https://img.shields.io/badge/ABCD_Spec-v1.1-green.svg)](https://github.com/brain-life/abcd-spec)
 [![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.586-blue.svg)](https://doi.org/10.25663/brainlife.app.586)
 
